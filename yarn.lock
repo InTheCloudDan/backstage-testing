@@ -36514,7 +36514,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"passport-oauth2@npm:1.x.x, passport-oauth2@npm:^1.1.2, passport-oauth2@npm:^1.4.0, passport-oauth2@npm:^1.6.0, passport-oauth2@npm:^1.6.1":
+"passport-oauth2@npm:1.x.x, passport-oauth2@npm:^1.1.2, passport-oauth2@npm:^1.4.0, passport-oauth2@npm:^1.6.0, passport-oauth2@npm:^1.6.1, passport-oauth2@npm:^1.7.0":
   version: 1.7.0
   resolution: "passport-oauth2@npm:1.7.0"
   dependencies:
@@ -40114,6 +40114,7 @@ __metadata:
     lint-staged: ^15.0.0
     minimist: ^1.2.5
     node-gyp: ^10.0.0
+    passport-oauth2: ^1.7.0
     prettier: ^2.2.1
     semver: ^7.5.3
     shx: ^0.3.2

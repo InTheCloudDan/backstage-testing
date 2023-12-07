@@ -14,16 +14,22 @@
  * limitations under the License.
  */
 
-export * from './github';
-export * from './gitlab';
-export * from './google';
-export * from './oauth2';
-export * from './okta';
-export * from './saml';
-export * from './microsoft';
-export * from './onelogin';
-export * from './bitbucket';
-export * from './bitbucketServer';
-export * from './atlassian';
-export * from './launchdarkly';
-export type { OAuthApiCreateOptions, AuthApiCreateOptions } from './types';
+import {
+  ProfileInfo,
+  BackstageIdentityResponse,
+} from '@backstage/core-plugin-api';
+
+/**
+ * Session information for Bitbucket auth.
+ *
+ * @public
+ */
+export type LaunchDarklySession = {
+  providerInfo: {
+    accessToken: string;
+    scopes: Set<string>;
+    expiresAt?: Date;
+  };
+  profile: ProfileInfo;
+  backstageIdentity: BackstageIdentityResponse;
+};

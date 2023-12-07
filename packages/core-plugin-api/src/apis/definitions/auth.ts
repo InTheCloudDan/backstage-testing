@@ -450,3 +450,19 @@ export const atlassianAuthApiRef: ApiRef<
 > = createApiRef({
   id: 'core.auth.atlassian',
 });
+
+/**
+ * Provides authentication towards LaunchDarkly APIs.
+ *
+ * @public
+ * @remarks
+ *
+ * See {@link https://developer.atlassian.com/cloud/jira/platform/scopes-for-connect-and-oauth-2-3LO-apps/}
+ * for a full list of supported scopes.
+ */
+export const launchdarklyAuthApiRef: ApiRef<
+  OAuthApi & ProfileInfoApi & BackstageIdentityApi & SessionApi
+> = createApiRef({
+  id: 'core.auth.launchdarkly',
+});
+

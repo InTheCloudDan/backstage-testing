@@ -23,6 +23,7 @@ import {
   oneloginAuthApiRef,
   bitbucketAuthApiRef,
   bitbucketServerAuthApiRef,
+  launchdarklyAuthApiRef,
 } from '@backstage/core-plugin-api';
 
 export const providers = [
@@ -73,5 +74,11 @@ export const providers = [
     title: 'Bitbucket Server',
     message: 'Sign In using Bitbucket Server',
     apiRef: bitbucketServerAuthApiRef,
+  },
+  {
+    id: 'launchdarkly-auth-provider',
+    title: 'LaunchDarkly',
+    message: 'Sign In using LaunchDarkly',
+    apiRef: launchdarklyAuthApiRef,
   },
 ];

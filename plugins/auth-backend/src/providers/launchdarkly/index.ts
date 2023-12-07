@@ -14,16 +14,7 @@
  * limitations under the License.
  */
 
-export * from './github';
-export * from './gitlab';
-export * from './google';
-export * from './oauth2';
-export * from './okta';
-export * from './saml';
-export * from './microsoft';
-export * from './onelogin';
-export * from './bitbucket';
-export * from './bitbucketServer';
-export * from './atlassian';
-export * from './launchdarkly';
-export type { OAuthApiCreateOptions, AuthApiCreateOptions } from './types';
+export { launchdarkly } from './provider';
+export type {
+  LaunchDarklyOAuthResult,
+} from './provider';

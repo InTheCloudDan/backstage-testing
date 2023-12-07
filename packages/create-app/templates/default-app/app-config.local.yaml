@@ -1,1 +1,8 @@
 # Backstage override configuration for your local development environment
+auth:
+  environment: development
+    providers:
+      launchdarkly:
+        development:
+          clientId: 111111
+          clientSecret: 22222

@@ -113,7 +113,12 @@ export default async function createPlugin(
           },
         },
       }),
-
+      launchdarkly: providers.launchdarkly.create({
+        signIn: {
+          resolver:
+            providers.bitbucketServer.resolvers.emailMatchingUserEntityProfileEmail(),
+        },
+      }),
       bitbucketServer: providers.bitbucketServer.create({
         signIn: {
           resolver:

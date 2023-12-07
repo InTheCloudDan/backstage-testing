@@ -33,6 +33,7 @@ import { saml } from './saml';
 import { AuthProviderFactory } from './types';
 import { bitbucketServer } from './bitbucketServer';
 import { easyAuth } from './azure-easyauth';
+import { launchdarkly } from './launchdarkly';
 
 /**
  * All built-in auth provider integrations.
@@ -58,6 +59,7 @@ export const providers = Object.freeze({
   onelogin,
   saml,
   easyAuth,
+  launchdarkly
 });
 
 /**
@@ -83,4 +85,5 @@ export const defaultAuthProviderFactories: {
   bitbucket: bitbucket.create(),
   bitbucketServer: bitbucketServer.create(),
   atlassian: atlassian.create(),
+  launchdarkly: launchdarkly.create(),
 };

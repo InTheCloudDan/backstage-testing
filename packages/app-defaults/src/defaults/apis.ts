@@ -56,11 +56,13 @@ import {
   bitbucketAuthApiRef,
   bitbucketServerAuthApiRef,
   atlassianAuthApiRef,
+  launchdarklyAuthApiRef
 } from '@backstage/core-plugin-api';
 import {
   permissionApiRef,
   IdentityPermissionApi,
 } from '@backstage/plugin-permission-react';
+import { LaunchDarklyAuth } from '../../../core-app-api/src';
 
 export const apis = [
   createApiFactory({
@@ -268,5 +270,20 @@ export const apis = [
     },
     factory: ({ config, discovery, identity }) =>
       IdentityPermissionApi.create({ config, discovery, identity }),
+  }),
+  createApiFactory({
+    api: launchdarklyAuthApiRef,
+    deps: {
+      discoveryApi: discoveryApiRef,
+      oauthRequestApi: oauthRequestApiRef,
+      configApi: configApiRef,
+    },
+    factory: ({ discoveryApi, oauthRequestApi, configApi }) =>
+      LaunchDarklyAuth.create({
+        configApi,
+        discoveryApi,
+        oauthRequestApi,
+        environment: configApi.getOptionalString('auth.environment'),
+      }),
   }),
 ];

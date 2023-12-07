@@ -391,6 +391,11 @@ auth:
         clientId: ${AUTH_ATLASSIAN_CLIENT_ID}
         clientSecret: ${AUTH_ATLASSIAN_CLIENT_SECRET}
         scopes: ${AUTH_ATLASSIAN_SCOPES}
+    login:
+      development:
+        clientId: 111111
+        clientSecret: 222222
+        scopes: "writer"
     myproxy:
       development: {}
 costInsights:
